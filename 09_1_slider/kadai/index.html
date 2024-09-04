@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>スライダー練習</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css"
+    />
+    <!-- SwiperのCSSとJavaScriptファイルをCDNで読み込む -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-logo">スライダー練習</h1>
+    </header>
+    <!-- Swiperの基本要素を参考サイトからコピー&ペーストして、各swiper-slideクラス内にそれぞれ画像を配置。前後の矢印ボタンとページネーションも配置する。 -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/main-1.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/main-2.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/main-3.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./images/main-4.png" alt="" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- スライダーを動作させるJavaScriptのプログラムを記述。動かせたら、自動再生、一度に複数のスライドを表示する、中央表示などのオプションも実践してみましょう。 -->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 2,
+        spaceBetween: 8,
+        centeredSlides: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
