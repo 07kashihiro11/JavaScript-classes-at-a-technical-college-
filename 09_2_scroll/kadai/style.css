@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 2;
+}
+
+.header {
+	background-color: #f1a359;
+	color: #fff;
+	padding: 16px;
+}
+
+.header-logo {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+}
+
+div.swiper-container {
+	margin-bottom: 60px;
+}
+
+.box {
+	background-color: #eee;
+	padding: 60px 60px 80px;
+	margin: 80px auto 0;
+	width: 80%;
+}
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+}
+
+p {
+	margin-top: 1em;
+	text-align: center;
+}

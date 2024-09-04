@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>スクロールエフェクト練習</title>
+	<link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+
+	<!-- AOSのCSSとJavaScriptファイルをCDNで読み込む -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="header-logo">スクロールエフェクト練習</h1>
+	</header>
+	<!-- Swiper START -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="./images/main-1.png" alt=""></div>
+			<div class="swiper-slide"><img src="./images/main-2.png" alt=""></div>
+			<div class="swiper-slide"><img src="./images/main-3.png" alt=""></div>
+		</div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-pagination swiper-pagination-white"></div>
+	</div>
+	<!-- Swiper END -->
+
+	<!-- data-aos属性でfade-upを指定して下から上にフェードインさせてみよう -->
+	<div class="box" data-aos="fade-up">
+		<h2>AOSとは</h2>
+		<p>AOS.js（Animation On Scroll library）とは、<br>「スクロールと連動したアニメーション」をカンタンに実装できる、JavaScriptのライブラリです。</p>
+	</div>
+
+	<!-- data-aos属性でfade-leftを指定して右から左にフェードインさせてみよう -->
+	<div class="box" data-aos="fade-left">
+		<h2>左にフェードイン</h2>
+		<p>data-aos属性でfade-leftを指定すると、<br>スクロールに合わせて右から左にフェードイン出来ます。</p>
+	</div>
+
+	<!-- data-aos属性でslide-rightを指定して左から右にスライドさせてみよう -->
+	<div class="box" data-aos="slide-right">
+		<h2>右にスライド</h2>
+		<p>data-aos属性でslide-rightを指定すると、<br>スクロールに合わせて左から右にフェードイン出来ます。</p>
+	</div>
+	
+	<!-- data-aos属性でslide-leftを指定して右から左にスライドさせてみよう -->
+	<div class="box" data-aos="slide-left">
+		<h2>左にスライド</h2>
+		<p>data-aos属性でslide-leftを指定すると、<br>スクロールに合わせて右から左にフェードイン出来ます。</p>
+	</div>
+
+	<!-- data-aos属性でzoom-inを指定して拡大表示させてみよう -->
+	<div class="box" data-aos="zoom-in">
+		<h2>ズームイン</h2>
+		<p>data-aos属性でzoom-inを指定すると、<br>スクロールに合わせてズームイン表示出来ます。</p>
+	</div>
+
+	<!-- SwiperやAOSを実行するためのscript.jsファイルを読み込む -->
+	 <script src="./script.js"></script>
+</body>
+
+</html>
