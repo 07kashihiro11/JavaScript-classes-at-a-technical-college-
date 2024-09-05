@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Helvetica Neue",
+		Arial,
+		"Hiragino Kaku Gothic ProN",
+		"Hiragino Sans",
+		Meiryo,
+		sans-serif;
+	background-color: #F0EBEA;
+}
+
+header {
+	background-color: #668E68;
+}
+
+.hamburger {
+	cursor: pointer;
+	height: 60px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 60px;
+	z-index: 5;
+  }
+  .hamburger span {
+	background-color: #fff;
+	height: 4px;
+	left: 15px;
+	position: absolute;
+	transition: all 0.6s;
+	width: 30px;
+  }
+  .hamburger_linetop {
+	top: 20px;
+  }
+  .hamburger_linecenter {
+	top: 29px;
+  }
+  .hamburger_linebottom {
+	top: 38px;
+  }
+
+nav {
+	margin: 0;
+	padding: 0 20px 20px;
+	list-style: none;
+}
+
+nav ul {
+	margin: 0;
+	list-style: none;
+	display: flex;
+	gap: 30px;
+}
+
+nav a {
+	color: #fff;
+}
+
+
+nav a:hover {
+	background-color: #fff;
+	color: #668E68;
+}
+
+h1,
+.header-logo {
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 20px;
+	line-height: 1;
+}
+
+.main-visual {
+	background-image: url(./images/main-bg.png);
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+	text-align: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+}
+
+.swiper-button-next::after{
+	color: #fff;
+}
+
+h2 {
+	color: #fff;
+	font-size: 65px;
+	font-weight: bold;
+	padding-top: 264px;
+}
+
+h3,
+.area-title {
+	color: #655046;
+	font-size: 42px;
+	font-weight: bold;
+	margin-bottom: 11px;
+	padding: 0;
+}
+
+h4,
+.area-subtitle {
+	color: #655046;
+	font-size: 20px;
+	margin-bottom: 44px;
+	padding: 0;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.about {
+	padding: 95px 0;
+	text-align: center;
+	color: #655046;
+}
+
+.menu, .contact {
+	padding: 85px 0 95px;
+	text-align: center;
+	color: #655046;
+	background-color: #fff;
+}
+
+.menu-wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 58px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-wrapper p {
+	margin-top: 10px;
+}
+
+
+ul {
+	margin-bottom: 57px;
+}
+
+li {
+	font-size: 16px;
+	padding: 8px 0;
+}
+
+.button {
+	text-decoration: none;
+	color: #fff;
+	background-color: #655046;
+	padding: 20px;
+	border-radius: 30px;
+	transition: all .5s;
+}
+
+.button:hover {
+	background-color: #668E68;
+}
+
+.news {
+	margin: 95px 0;
+}
+
+.box {
+	background-color: #fff;
+	text-align: center;
+	width: 600px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.box h3,
+.box h4,
+.box li {
+	color: #655046;
+}
+
+.news-list {
+	text-align: left;
+	margin: 0 50px;
+}
+
+.news-list span {
+	font-size: 14px;
+	color: #aaa;
+	margin-right: 40px;
+}
+
+.new::after {
+	content: "New!!";
+	background-color: #f00;
+	color: #fff;
+	font-size: 12px;
+}
+
+
+footer {
+	background-color: #668E68;
+	color: #fff;
+	font-size: 14px;
+	padding: 25px 0;
+	text-align: center;
+}
+
+/***********
+ ここからメニューページ
+ ***********/
+table {
+	margin: 0 auto 50px;
+}
+th, td {
+	border: 1px dotted #655046;
+	padding: 24px;
+	vertical-align: middle;
+}
+th {
+	background-color: #655046;
+	color: #fff;
+	border-style: solid;
+}
+/***********
+ ここまでメニューページ
+ ***********/
+
+/***********
+ ここからコンタクトページ
+ ***********/
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	font-size: 16px;
+	padding: 8px;
+	width: 100%;
+}
+
+input[type="submit"] {
+	font-size: 16px;
+	padding: 8px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+/***********
+ ここまでコンタクトページ
+ ***********/
+
+@media screen and (max-width: 1020px) {
+
+	h1 {
+		font-size: 36px;
+	}
+
+	.main-visual {
+		height: 480px;
+	}
+
+	h2 {
+		font-size: 48px;
+		padding-top: 222px;
+	}
+
+	h3 {
+		font-size: 35px;
+	}
+
+	h4 {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.about {
+		padding: 65px 0;
+	}
+
+	.menu {
+		padding-top: 65px;
+		padding-bottom: 75px;
+	}
+
+	.menu-wrapper {
+		width: 100%;
+		display: block;
+	}
+
+	.menu-wrapper div {
+		margin-bottom: 30px;
+	}
+
+	.news-list span {
+		font-size: 13px;
+	}
+
+	footer {
+		font-size: 12px;
+	}
+
+}
+
+@media screen and (max-width: 620px) {
+
+	h1 {
+		font-size: 30px;
+		padding: 13px;
+	}
+
+	.main-visual {
+		height: 320px;
+	}
+
+	h2 {
+		font-size: 38px;
+		padding-top: 137px;
+	}
+
+	.about {
+		padding: 45px 16px;
+	}
+
+	h3 {
+		font-size: 28px;
+	}
+
+	h4 {
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+
+	p {
+		font-size: 13px;
+	}
+
+	.menu {
+		padding-top: 45px;
+		padding-bottom: 75px;
+	}
+
+	.menu-wrapper img {
+		width: 250px;
+	}
+
+	a {
+		font-size: 14px;
+	}
+
+	.news {
+		margin: 45px 0;
+	}
+
+	.box {
+		width: 85%;
+		padding: 25px;
+	}
+
+	.news-list {
+		margin: 0 24px;
+	}
+
+	.news-list span {
+		font-size: 13px;
+		display: block;
+	}
+
+	footer {
+		font-size: 11px;
+	}
+
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Cafe</title>
+    <link rel="stylesheet" href="./reset.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- SwiperのCSSとJavaScriptファイルをCDNで読み込む -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOSのCSSとJavaScriptファイルをCDNで読み込む -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="hamburger" id="js_hamburger">
+        <span class="hamburger_linetop"></span>
+        <span class="hamburger_linecenter"></span>
+        <span class="hamburger_linebottom"></span>
+      </div>
+      <h1>Tech Cafe</h1>
+      <div class="sidemenu">
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-visual">
+      <h2>GRAND OPEN.</h2>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./images/coffee.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/crepe.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/croissant.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/earlgreytea.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/milktea.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/pancake.jpg" alt="" />
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        speed: 3000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        preventInteractionOnTransition: true,
+        slidesPerView: 4,
+        spaceBetween: 8,
+        centeredSlides: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+    <div class="about" id="about" data-aos="fade-up">
+      <h3>ABOUT</h3>
+
+      <h4>Tech Cafeとは</h4>
+
+      <p>
+        Tech CafeはPC作業に最適な電源付きテーブルもございます。<br />
+        美味しいパンケーキとコーヒーを飲みながら、<br />
+        お仕事、打ち合わせなど、ごゆっくりお過ごしくださいませ。
+      </p>
+    </div>
+
+    <div class="menu" id="menu" data-aos="fade-up">
+      <h3>MENU</h3>
+      <h4>メニュー</h4>
+
+      <div class="menu-wrapper">
+        <div>
+          <img src="./images/crepe.jpg" />
+          <p>季節のクレープ</p>
+        </div>
+        <div>
+          <img src="./images/pancake.jpg" />
+          <p>2種のベリーパンケーキ</p>
+        </div>
+        <div>
+          <img src="./images/croissant.jpg" />
+          <p>焼きたてクロワッサン</p>
+        </div>
+      </div>
+
+      <a href="#menu" class="button">メニューをもっと見る</a>
+    </div>
+
+    <div id="news" class="news" data-aos="fade-up">
+      <div class="box">
+        <h3>news</h3>
+        <h4>お知らせ</h4>
+        <ul class="news-list">
+          <li class="new">
+            <span>2023.05.26</span>
+            <a href="#">アンケート実施</a>
+          </li>
+          <li><span>2023.05.11</span> HTML/CSS学習会開催</li>
+          <li><span>2023.05.05</span> GWの営業について</li>
+          <li><span>2023.04.27</span> HTML/CSS学習会開催</li>
+          <li><span>2023.04.21</span> GRAND OPEN!!</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>Copyright 2023 Tech Cafe inc.</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
